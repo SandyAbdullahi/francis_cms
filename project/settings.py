@@ -32,13 +32,13 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 # redirect http to https 
-SECURE_HSTS_SECONDS = os.environ.get('DJANGO_DEBUG', '') != 'False'
-SECURE_SSL_REDIRECT = os.environ.get('DJANGO_DEBUG', '') != 'False'
-SECURE_HSTS_PRELOAD = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SECURE_HSTS_SECONDS = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SECURE_SSL_REDIRECT = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SECURE_HSTS_PRELOAD = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-SECURE_HSTS_INCLUDE_SUBDOMAINS = os.environ.get('DJANGO_DEBUG', '') != 'False'
-SESSION_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
-CSRF_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SESSION_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# CSRF_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 
@@ -60,6 +60,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -124,7 +125,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+USE_TZ = True
+
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
@@ -133,7 +136,21 @@ USE_L10N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
+
+
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/2.1/howto/static-files/
+
+# The absolute path to the directory where collectstatic will collect static files for deployment.
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
+
+# Simplified static file serving.
+# https://warehouse.python.org/project/whitenoise/
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
