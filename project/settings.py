@@ -179,3 +179,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 # Media settings for wagtail and deployment
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+
+# WAGTAIL SITE NAME
+WAGTAIL_SITE_NAME = 'Francis Interior Design'
