@@ -32,13 +32,13 @@ DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 # redirect http to https 
-SECURE_HSTS_SECONDS = os.environ.get('DJANGO_DEBUG', '') != 'False'
-SECURE_SSL_REDIRECT = os.environ.get('DJANGO_DEBUG', '') != 'False'
-SECURE_HSTS_PRELOAD = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SECURE_HSTS_SECONDS = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SECURE_SSL_REDIRECT = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SECURE_HSTS_PRELOAD = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-SECURE_HSTS_INCLUDE_SUBDOMAINS = os.environ.get('DJANGO_DEBUG', '') != 'False'
-SESSION_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
-CSRF_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# SESSION_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# CSRF_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 
