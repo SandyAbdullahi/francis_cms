@@ -52,6 +52,9 @@ ALLOWED_HOSTS = ['*']
 INSTALLED_APPS = [
     # Apps
     'home',
+    'about',
+    'services',
+    'contact',
 
 
     # WAGTAIL
