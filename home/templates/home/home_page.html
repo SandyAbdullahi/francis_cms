@@ -5,5 +5,10 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
+<nav class="navbar navbar-expand navbar-light bg-light">
+    <div class="nav navbar-nav">
+        <a class="nav-item nav-link active" href="{% pageurl page.get_children %}"">Home</a>
+    </div>
+</nav>
     {{ page.body|richtext }}
 {% endblock %}
