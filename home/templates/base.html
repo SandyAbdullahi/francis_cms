@@ -1,0 +1,42 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% if page.title %}
+    <title>{{ page.title }}</title>
+    {% else %}
+        <title>Francis Interior Designs</title>
+    {% endif %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    {% block styles %}
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+
+    {% endblock  %}
+</head>
+
+<body>
+
+
+
+
+
+    <div class="container text-center">
+        <div class="p-5">
+            {% block content %}
+            {% endblock  %}
+        </div>
+    </div>
+
+    {% block scripts %}
+
+    {% endblock  %}
+</body>
+
+</html>

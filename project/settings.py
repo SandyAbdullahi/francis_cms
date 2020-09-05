@@ -50,6 +50,10 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+    # Apps
+    'home',
+
+
     # WAGTAIL
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
