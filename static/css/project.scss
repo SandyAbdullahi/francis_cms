@@ -60,12 +60,7 @@
     background-color: $alt-bg !important;
   }
 
-  .image-container {
-    background: url('src/assets/images/gian_paolo.jpg') no-repeat center;
-    background-size: cover;
-    height: 45rem;
-
-  }
+ 
 
 }
 
@@ -265,7 +260,7 @@ footer {
 @media (min-width:768px) {
   .jumbotron {
     padding: 10rem 0 0 0;
-    margin-bottom: 25rem;
+    margin-bottom: 5rem;
 
     .text {
       margin-top: 5rem;
@@ -274,12 +269,10 @@ footer {
 
 
     .image-container {
-      top: 5rem;
-      height: 45rem;
+      height: 30rem;
       position: absolute;
-      top: 4rem;
+      top: 0rem;
       right: 0;
-
     }
   }
 

@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% load wagtailcore_tags %}
+{% load wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -8,14 +9,17 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-md-7 text">
+      <div class="col-12 col-md-5 col-lg-7 text">
         <div class="headline">{{ page.headline|richtext }}</div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, repellendus placeat quibusdam a dolor esse officia asperiores sit quisquam quo vitae possimus tenetur inventore exercitationem aut et dignissimos magnam. Corporis?</p>
+        <p>{{ page.headline_intro|richtext }}</p>
         <p class="lead">
           <a class="btn btn-alt btn-lg rounded-pill" [routerLink]="['/services']" role="button">Learn More</a>
         </p>
       </div>
-      <div class="col-12 col-md-5 image-container">
+      <div class="col-12 col-md-7 col-lg-5">
+
+          {% image page.headline_image original class="img-fluid image-container"%}
+        
       </div>
     </div>
   </div>
