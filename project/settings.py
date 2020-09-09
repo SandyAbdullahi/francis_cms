@@ -57,6 +57,10 @@ INSTALLED_APPS = [
     'contact',
 
 
+    #sass compressor
+    'compressor',
+
+
     # WAGTAIL
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -177,6 +181,16 @@ STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = 'static/'
+
+STATICFILES_FINDERS = [
+    'compressor.finders.CompressorFinder'
+]
+
+COMPRESS_ROOT = 'static'
+
+COMPRESS_PRECOMPILERS = (
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/

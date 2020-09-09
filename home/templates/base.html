@@ -1,4 +1,5 @@
 {% load static %}
+{% load compress %}
 <!doctype html>
 <html lang="en">
 
@@ -14,10 +15,12 @@
 
 
     {% block styles %}
+{% comment %} 
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}"> {% endcomment %}
 
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-
-
+    {% compress css %}
+        <link type="text/x-scss" href="{% static 'css/styles.scss' %}" rel="stylesheet" media="screen">
+    {% endcompress %}
     {% endblock  %}
 </head>
 
