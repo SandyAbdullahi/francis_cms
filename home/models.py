@@ -14,9 +14,29 @@ class HomePage(Page):
     )
     muted_text_top = RichTextField(blank=True)
     top_sentence = RichTextField(blank=True)
-
+    top_sentence_second = RichTextField(blank=True)
+    number_one = RichTextField(blank=True)
+    number_one_title = RichTextField(blank=True)
+    number_one_content = RichTextField(blank=True)
+    number_two = RichTextField(blank=True)
+    number_two_title = RichTextField(blank=True)
+    number_two_content = RichTextField(blank=True)
+    number_three = RichTextField(blank=True)
+    number_three_title = RichTextField(blank=True)
+    number_three_content = RichTextField(blank=True)
+    muted_text_bottom = RichTextField(blank=True)
+    service_title = RichTextField(blank=True)
+    service_content = RichTextField(blank=True)
+    point_one_title = RichTextField(blank=True)
+    point_one_content = RichTextField(blank=True)
+    point_two_title = RichTextField(blank=True)
+    point_two_content = RichTextField(blank=True)
+    point_three_title = RichTextField(blank=True)
+    point_three_content = RichTextField(blank=True)
+    work_title = RichTextField(blank=True)
+    work_content = RichTextField(blank=True)
     
-    body = RichTextField(blank=True)
+    
 
     content_panels = Page.content_panels + [
         FieldPanel('headline', classname="full"),
@@ -24,5 +44,29 @@ class HomePage(Page):
         FieldPanel('headline_image', classname="full"),
         FieldPanel('muted_text_top', classname="full"),
         FieldPanel('top_sentence', classname="full"),
-        FieldPanel('body', classname="full"),
+        FieldPanel('top_sentence_second', classname="full"),
+        FieldPanel('number_one', classname="full"),
+        FieldPanel('number_one_title', classname="full"),
+        FieldPanel('number_one_content', classname="full"),
+        FieldPanel('number_two', classname="full"),
+        FieldPanel('number_two_title', classname="full"),
+        FieldPanel('number_two_content', classname="full"),
+        FieldPanel('number_three', classname="full"),
+        FieldPanel('number_three_title', classname="full"),
+        FieldPanel('number_three_content', classname="full"),
+        FieldPanel('muted_text_bottom', classname="full"),
+        FieldPanel('service_title', classname="full"),
+        FieldPanel('service_content', classname="full"),
+        FieldPanel('point_one_title', classname="full"),
+        FieldPanel('point_one_content', classname="full"),
+        FieldPanel('point_two_title', classname="full"),
+        FieldPanel('point_two_content', classname="full"),
+        FieldPanel('point_three_title', classname="full"),
+        FieldPanel('point_three_content', classname="full"),
+        FieldPanel('work_title', classname="full"),
+        FieldPanel('work_content', classname="full"),
+
+
+
+   
     ]

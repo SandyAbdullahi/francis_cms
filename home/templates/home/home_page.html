@@ -27,24 +27,24 @@
 
 <div class="services-container">
   <div class="container">
-    <p class="text-muted font-weight-bold">Work with me</p>
-    <h1>Planning, Designing and making dreams come true</h1>
-    <h1>- all in one place</h1>
+    <p class="text-muted font-weight-bold">{{ page.muted_text_top|richtext }}</p>
+    <h1>{{ page.top_sentence|richtext }}</h1>
+    <h1>{{ page.top_sentence_second|richtext }}</h1>
     <div class="row">
       <div class="col-12 col-md-4 my-2">
-        <h1 class="number">01</h1>
-        <h4>Lorem, ipsum.</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum omnis doloremque?</p>
+        <h1 class="number">{{ page.number_one|richtext }}</h1>
+        <h4>{{ page.number_one_title|richtext }}</h4>
+        <p>{{ page.number_one_content|richtext }}</p>
       </div>
       <div class="col-12 col-md-4 my-2">
-        <h1 class="number">02</h1>
-        <h4>Lorem, ipsum.</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum omnis doloremque?</p>
+        <h1 class="number">{{ page.number_two|richtext }}</h1>
+        <h4>{{ page.number_two_title |richtext }}</h4>
+        <p>{{ page.number_two_content|richtext }}</p>
       </div>
       <div class="col-12 col-md-4 my-2">
-        <h1 class="number">03</h1>
-        <h4>Lorem, ipsum.</h4>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum omnis doloremque?</p>
+        <h1 class="number">{{ page.number_three|richtext }}</h1>
+        <h4>{{ page.number_three_title |richtext }}</h4>
+        <p>{{ page.number_three_content|richtext }}</p>
       </div>
     </div>
 </div>
@@ -52,9 +52,9 @@
   <div class="call-to-action">
     <div class="row">
       <div class="col-12 col-md-6 text">
-        <p class="text-muted font-weight-bold">How I do it</p>
-        <h2>Making things easier for you</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis dignissimos vitae animi nesciunt, sapiente nulla.</p>
+        <p class="text-muted font-weight-bold">{{ page.muted_text_bottom|richtext }}</p>
+        <h2>{{ page.service_title|richtext }}</h2>
+        <p>{{ page.service_content|richtext }}</p>
         <a class="btn btn-dark btn-lg rounded-pill" [routerLink]="['/services']"  role="button">My Services</a>
       </div>
       <div class="col-12 col-md-6 image-container"></div>
@@ -62,26 +62,26 @@
     <div class="row row-2">
       <div class="offer col-12 col-md-4 text-center">
         <i class="fas fa-shoe-prints fa-5x"></i>
-        <h3>Simple Specifications</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, hic!</p>
+        <h3>{{ page.point_one_title|richtext }}</h3>
+        <p>{{ page.point_one_content|richtext }}</p>
       </div>
       <div class="offer col-12 col-md-4 text-center">
         <i class="fas fa-tag fa-5x"></i>
-        <h3>Attractive Pricing</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, hic!</p>
+        <h3>{{ page.point_two_title|richtext }}</h3>
+        <p>{{ page.point_two_content|richtext }}</p>
       </div>
       <div class="offer col-12 col-md-4 text-center">
         <i class="fas fa-handshake fa-5x"></i>
-        <h3>Smooth Collaboration</h3>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, hic!</p>
+        <h3>{{ page.point_three_title|richtext }}</h3>
+        <p>{{ page.point_three_content|richtext }}</p>
       </div>
     </div>
   </div>
 </div>
 </div>
 <div class="projects container-fluid">
-  <h3>Some of my work</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa tenetur nesciunt.</p>
+  <h3>{{ page.work_title|richtext }}</h3>
+  <p>{{ page.work_content|richtext }}</p>
   <div class="row">
     <div class="col-12 col-md-6 col-lg-3">
       <img src="../../../assets/images/projects/alexandra-gorn.jpg" alt="alexander-gorn" class="img-thumbnail">
