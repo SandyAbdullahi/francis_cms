@@ -1,0 +1,54 @@
+{% load wagtailcore_tags %}
+
+
+<footer>
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container-fluid">
+            <h5 class="text-center">Quick links</h5>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+
+                    <ul class="list-unstyled quick-links">
+                        {% if page.title == 'Home' %}
+
+                        {% else %}
+                        <li><a href="{% pageurl page.get_parent %}"><i
+                                    class="fas fa-angle-right"></i>{{ page.get_parent.title }}</a></li>
+                        {% endif %}
+
+
+                        {% for page in page.get_siblings %}
+
+                        <li><a href="{% pageurl page %}"><i class="fas fa-angle-right"></i>{{ page.title }}</a></li>
+        
+        {% endfor %}   
+
+        {% for page in page.get_children %}
+                 <li><a href="{% pageurl page %}"><i class="fas fa-angle-right"></i>{{ page.title }}</a></li>
+        
+        {% endfor %}  
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+        <ul class="list-unstyled list-inline social text-center">
+          <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li class="list-inline-item"><a href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li class="list-inline-item"><a href="#" target="_blank"><i class="fa fa-envelope"></i></a></li>
+        </ul>
+      </div>
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+        <p class="h6"><i class="fa fa-copyright" aria-hidden="true"></i>
+          Copyright<a class="ml-2" href="https://abdullahinur.online/" target="_blank">ABDULLAHINUR</a></p>
+      </div>
+      <hr>
+    </div>
+  </div>
+</section>
+<!-- ./Footer -->
+</footer>

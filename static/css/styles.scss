@@ -1,7 +1,6 @@
+@import './colors';
 @import './bootstrap-4.5.2/scss/bootstrap';
+@import './project.scss';
 
-
-body {
-    background-color: #aaa;
-    color: #fff;
-}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

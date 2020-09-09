@@ -6,5 +6,54 @@
 
 {% block content %}
 
-    {{ page.body|richtext }}
+<div class="service-page-container">
+  <div class="container container-1">
+    <p class="text-muted font-weight-bold">Services</p>
+    <h1 class="display-3">What I can do for <span class="text-accent">You</span> </h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur error aperiam corrupti minus est necessitatibus quae sit amet harum porro?</p>
+    <img src="../../../assets/images/christopher-jolly.jpg" class="img-fluid" alt="christopher-jolly">
+    <div class="text">
+      <h2>Unbelievable styles, colors, and textures</h2>
+      <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati perspiciatis quis vitae est blanditiis consectetur.</p>
+    </div>
+  </div>
+  <div class="container container-2">
+    <h1 class="mb-5">My Services</h1>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>General Interior Design Consultations</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum architecto beatae dicta recusandae, facere deleniti iste pariatur iusto deserunt dolorum praesentium atque eius saepe, quibusdam eos cum quo corrupti aliquam?</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="../../../assets/images/services/cowomen.jpg" class="img-thumbnail" alt="">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>Wallpaper/Paint</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum architecto beatae dicta recusandae, facere deleniti iste pariatur iusto deserunt dolorum praesentium atque eius saepe, quibusdam eos cum quo corrupti aliquam?</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="../../../assets/images/services/christina-winter.jpg" class="img-thumbnail" alt="">
+      </div>
+
+    </div>
+    <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>Room Make-Overs</h3>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum architecto beatae dicta recusandae, facere deleniti iste pariatur iusto deserunt dolorum praesentium atque eius saepe, quibusdam eos cum quo corrupti aliquam?</p>
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="../../../assets/images/services/rune-enstad.jpg" class="img-thumbnail" alt="">
+      </div>
+
+    </div>
+  </div>
+  <div class="container-fluid container-3">
+    <h1 class="display-4">Book a meeting</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quos suscipit iusto esse est voluptatum laboriosam unde! Voluptates temporibus ex cumque esse labore libero nemo.</p>
+      <a class="btn btn-alt btn-lg rounded-pill" [routerLink]="['/contact']"  role="button">Click Here</a>
+  </div>
+</div>
+
 {% endblock %}

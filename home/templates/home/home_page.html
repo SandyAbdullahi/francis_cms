@@ -5,5 +5,110 @@
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
-    {{ page.body|richtext }}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 col-md-7 text">
+        <h1>Designed Spaces, Taken To The Next <span class="accent">Level</span></h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, repellendus placeat quibusdam a dolor esse officia asperiores sit quisquam quo vitae possimus tenetur inventore exercitationem aut et dignissimos magnam. Corporis?</p>
+        <p class="lead">
+          <a class="btn btn-alt btn-lg rounded-pill" [routerLink]="['/services']" role="button">Learn More</a>
+        </p>
+      </div>
+      <div class="col-12 col-md-5 image-container">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="services-container">
+  <div class="container">
+    <p class="text-muted font-weight-bold">Work with me</p>
+    <h1>Planning, Designing and making dreams come true</h1>
+    <h1>- all in one place</h1>
+    <div class="row">
+      <div class="col-12 col-md-4 my-2">
+        <h1 class="number">01</h1>
+        <h4>Lorem, ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum omnis doloremque?</p>
+      </div>
+      <div class="col-12 col-md-4 my-2">
+        <h1 class="number">02</h1>
+        <h4>Lorem, ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum omnis doloremque?</p>
+      </div>
+      <div class="col-12 col-md-4 my-2">
+        <h1 class="number">03</h1>
+        <h4>Lorem, ipsum.</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora harum omnis doloremque?</p>
+      </div>
+    </div>
+</div>
+<div class="container">
+  <div class="call-to-action">
+    <div class="row">
+      <div class="col-12 col-md-6 text">
+        <p class="text-muted font-weight-bold">How I do it</p>
+        <h2>Making things easier for you</h2>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis dignissimos vitae animi nesciunt, sapiente nulla.</p>
+        <a class="btn btn-dark btn-lg rounded-pill" [routerLink]="['/services']"  role="button">My Services</a>
+      </div>
+      <div class="col-12 col-md-6 image-container"></div>
+    </div>
+    <div class="row row-2">
+      <div class="offer col-12 col-md-4 text-center">
+        <i class="fas fa-shoe-prints fa-5x"></i>
+        <h3>Simple Specifications</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, hic!</p>
+      </div>
+      <div class="offer col-12 col-md-4 text-center">
+        <i class="fas fa-tag fa-5x"></i>
+        <h3>Attractive Pricing</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, hic!</p>
+      </div>
+      <div class="offer col-12 col-md-4 text-center">
+        <i class="fas fa-handshake fa-5x"></i>
+        <h3>Smooth Collaboration</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, hic!</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<div class="projects container-fluid">
+  <h3>Some of my work</h3>
+  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam culpa tenetur nesciunt.</p>
+  <div class="row">
+    <div class="col-12 col-md-6 col-lg-3">
+      <img src="../../../assets/images/projects/alexandra-gorn.jpg" alt="alexander-gorn" class="img-thumbnail">
+      <div class="text">
+        <h4>Francis's House</h4>
+      <p>Lorem, ipsum dolor.</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <img src="../../../assets/images/projects/kara-eads.jpg" alt="kara-eads" class="img-thumbnail">
+      <div class="text">
+        <h4>Dave's House</h4>
+      <p>Lorem, ipsum dolor.</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <img src="../../../assets/images/projects/jason-leung.jpg" alt="jason-leung" class="img-thumbnail">
+      <div class="text">
+        <h4>Snack Shop</h4>
+      <p>Lorem, ipsum dolor.</p>
+      </div>
+    </div>
+    <div class="col-12 col-md-6 col-lg-3">
+      <img src="../../../assets/images/projects/austin-distel-waw.jpg" alt="austin-distel-waw" class="img-thumbnail">
+      <div class="text">
+        <h4>The office</h4>
+      <p>Lorem, ipsum dolor.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 {% endblock %}
