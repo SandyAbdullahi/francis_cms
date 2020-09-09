@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+@import './colors';
+
 
 .site {
   display: flex;
@@ -40,8 +42,14 @@
     }
   }
 
-  h1 {
-    font-weight: 900;
+  .headline {
+    * {
+      font-weight: 900;
+      font-size: 3rem;
+      line-height: 1;
+    }:last-child {
+      color: $accent;
+    }
   }
 
   .accent {
@@ -263,10 +271,7 @@ footer {
       margin-top: 5rem;
     }
 
-    h1 {
-      font-size: 2.5rem;
-      line-height: 1.2;
-    }
+
 
     .image-container {
       top: 5rem;
