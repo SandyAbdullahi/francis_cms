@@ -13,9 +13,7 @@
   flex: 1;
 }
 
-.text-muted {
-  font-weight: 900 !important;
-}
+
 .navbar {
   background: $body-bg;
 
@@ -76,6 +74,10 @@
 }
 
 .services-container {
+  p:nth-child(1) {
+    font-weight: 900;
+  
+  }
   h1 {
     font-weight: 600;
   }
@@ -288,15 +290,17 @@ footer {
     .text {
       margin-top: 5rem;
       z-index: 1;
+      padding: 2rem 0rem 0rem 2rem;
+      background-color: rgba(16, 25, 53, 0.5);
     }
 
 
 
     .image-container {
       position: absolute;
-      top: 0rem;
-      right: 0;
-      max-width: 150%;
+      top: -4.4rem;
+      right: 0rem;
+      max-width: 200%;
       opacity: 0.5;
 
     }
@@ -306,7 +310,17 @@ footer {
       .row {
         .text {
           padding: 10% 3rem 2rem 2rem;
+          h2 {
+            margin-bottom: 5rem;
+          }
+        }
       }
+      .row-2 {
+        .offer {
+          i {
+            margin-bottom: 2rem;
+          }
+        }
       }
     }  
   }
@@ -326,6 +340,7 @@ footer {
       bottom: 10rem;
       padding: 3rem;
       right: 0.2rem;
+ 
     }
     .container-1 {
       margin: auto auto 2rem auto;
@@ -370,10 +385,34 @@ footer {
 
 @media (min-width:992px) {
   .jumbotron {
-    h1 {
-
-      font-size: 4.5rem;
-      line-height: 1.2;
+    .text {
+      margin-top: 0rem;
+      padding: 4rem 4rem 4rem 4rem;
+      position: relative;
+      left: 2vw;
+      h1 {
+  
+        font-size: 4.5rem;
+        line-height: 1.2;
+      }
+    }
+  }
+  .services-container {
+    .call-to-action {
+      .row {
+        .text {
+          p:nth-child(1) {
+            font-weight: 900;
+          }
+          h2 {
+            font-size: 3rem;
+            margin-bottom: 10rem;
+          }
+          p:nth-child(3) {
+            font-size: 1.3rem;
+          }
+        }
+      }
     }
   }
   .service-page-container {
