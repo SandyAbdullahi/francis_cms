@@ -60,6 +60,8 @@ INSTALLED_APPS = [
     #sass compressor
     'compressor',
 
+    # Wagtail data transfer
+    'wagtail_transfer',
 
     # WAGTAIL
     'wagtail.contrib.forms',
@@ -218,3 +220,17 @@ registry.register_plugin(rustface.willow)
 WAGTAIL_SITE_NAME = 'Francis Interior Design'
 
 WAGTAILIMAGES_FEATURE_DETECTION_ENABLED = True
+
+
+WAGTAILTRANSFER_SOURCES = {
+    'staging': {
+        'BASE_URL': 'http://localhost:3000/wagtail-transfer/',
+        'SECRET_KEY': '4ac4822149691395773b2a8942e1a472',
+    },
+    'production': {
+        'BASE_URL': 'https://francisinteriordesigns.pythonanywhere.com/wagtail-transfer/',
+        'SECRET_KEY': 'a36476ffc6af34dc935570d97369eca0',
+    },
+}
+
+WAGTAILTRANSFER_SECRET_KEY = '7cd5de8229be75e1e0c2af8abc2ada7e'
