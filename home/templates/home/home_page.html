@@ -9,17 +9,18 @@
 <div class="jumbotron jumbotron-fluid">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-12 col-md-5 col-lg-7 text">
+      <div class="col-12 col-md-7 col-lg-7 text">
         <div class="headline">{{ page.headline|richtext }}</div>
         <p>{{ page.headline_intro|richtext }}</p>
         <p class="lead">
           <a class="btn btn-alt btn-lg rounded-pill" href="services/" role="button">Learn More</a>
         </p>
       </div>
-      <div class="col-12 col-md-7 col-lg-5">
+      <div class="col-12 col-md-5 col-lg-5">
 
-          {% image page.headline_image original class="img-fluid image-container" %}
-        
+          {% image page.headline_image original as img %}
+          <img src="{{ img.url }}" alt="{{img.alt}}" class="image-container" >
+          
       </div>
     </div>
   </div>

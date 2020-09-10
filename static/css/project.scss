@@ -45,6 +45,14 @@
     }
   }
 
+  .image-container {
+    max-width: 100%;
+    top: 0rem;
+    right: 0;
+    opacity: 1;
+    z-index: 0;
+  }
+
   .headline {
     * {
       font-weight: 900;
@@ -279,16 +287,28 @@ footer {
 
     .text {
       margin-top: 5rem;
+      z-index: 1;
     }
 
 
 
     .image-container {
-      height: 30rem;
       position: absolute;
       top: 0rem;
       right: 0;
+      max-width: 150%;
+      opacity: 0.5;
+
     }
+  }
+  .services-container {
+    .call-to-action {
+      .row {
+        .text {
+          padding: 10% 3rem 2rem 2rem;
+      }
+      }
+    }  
   }
 
   .service-page-container {
