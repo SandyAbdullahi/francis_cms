@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
-{% load wagtailimages_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
+
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -18,7 +18,7 @@
       </div>
       <div class="col-12 col-md-7 col-lg-5">
 
-          {% image page.headline_image original class="img-fluid image-container"%}
+          {% image page.headline_image original class="img-fluid image-container" %}
         
       </div>
     </div>

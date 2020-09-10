@@ -1,8 +1,10 @@
 from django.db import models
 
-from wagtail.core.models import Page
-from wagtail.core.fields import RichTextField
-from wagtail.admin.edit_handlers import FieldPanel
+from wagtail.core.models import Page, Orderable
+from wagtail.core.fields import RichTextField, StreamField
+from wagtail.admin.edit_handlers import FieldPanel, InlinePanel
+from wagtail.images.edit_handlers import ImageChooserPanel
+
 
 
 class HomePage(Page):
@@ -45,7 +47,7 @@ class HomePage(Page):
     content_panels = Page.content_panels + [
         FieldPanel('headline', classname="full"),
         FieldPanel('headline_intro', classname="full"),
-        FieldPanel('headline_image', classname="full"),
+        ImageChooserPanel('headline_image', classname="full"),
         FieldPanel('muted_text_top', classname="full"),
         FieldPanel('top_sentence', classname="full"),
         FieldPanel('top_sentence_second', classname="full"),
@@ -61,7 +63,7 @@ class HomePage(Page):
         FieldPanel('muted_text_bottom', classname="full"),
         FieldPanel('service_title', classname="full"),
         FieldPanel('service_content', classname="full"),
-        FieldPanel('service_image', classname="full"),
+        ImageChooserPanel('service_image', classname="full"),
         FieldPanel('point_one_title', classname="full"),
         FieldPanel('point_one_content', classname="full"),
         FieldPanel('point_two_title', classname="full"),
