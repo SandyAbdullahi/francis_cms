@@ -86,34 +86,61 @@
   <p>{{ page.work_content|richtext }}</p>
   <div class="row">
     <div class="col-12 col-md-6 col-lg-3">
-      <img src="../../../assets/images/projects/alexandra-gorn.jpg" alt="alexander-gorn" class="img-thumbnail">
+      {% image page.work_feature_one_image fill-600x600 as img %}
+      <img src="{{ img.url }}" class="img-thumbnail" alt="{{ img.alt }}">
       <div class="text">
-        <h4>Francis's House</h4>
-      <p>Lorem, ipsum dolor.</p>
+        <h4>{{ page.work_feature_one_title|richtext }}</h4>
+      <p>{{ page.work_feature_one_description|richtext }}</p>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-3">
-      <img src="../../../assets/images/projects/kara-eads.jpg" alt="kara-eads" class="img-thumbnail">
+      {% image page.work_feature_two_image fill-600x600 as img %}
+      <img src="{{ img.url }}" class="img-thumbnail" alt="{{ img.alt }}">
       <div class="text">
-        <h4>Dave's House</h4>
-      <p>Lorem, ipsum dolor.</p>
+        <h4>{{ page.work_feature_two_title|richtext }}</h4>
+      <p>{{ page.work_feature_two_description|richtext }}</p>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-3">
-      <img src="../../../assets/images/projects/jason-leung.jpg" alt="jason-leung" class="img-thumbnail">
+      {% image page.work_feature_three_image fill-600x600 as img %}
+      <img src="{{ img.url }}" class="img-thumbnail" alt="{{ img.alt }}">
       <div class="text">
-        <h4>Snack Shop</h4>
-      <p>Lorem, ipsum dolor.</p>
+        <h4>{{ page.work_feature_three_title|richtext }}</h4>
+      <p>{{ page.work_feature_three_description|richtext }}</p>
       </div>
     </div>
     <div class="col-12 col-md-6 col-lg-3">
-      <img src="../../../assets/images/projects/austin-distel-waw.jpg" alt="austin-distel-waw" class="img-thumbnail">
+      {% image page.work_feature_four_image fill-600x600 as img %}
+      <img src="{{ img.url }}" class="img-thumbnail" alt="{{ img.alt }}">
       <div class="text">
-        <h4>The office</h4>
-      <p>Lorem, ipsum dolor.</p>
+        <h4>{{ page.work_feature_four_title|richtext }}</h4>
+        <p>{{ page.work_feature_four_description|richtext }}</p>
       </div>
     </div>
 
+  </div>
+  <div class="container">
+    <div class="row mx-auto">
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner p-5">
+          {% for loop_cycle in self.carousel_images.all %}
+          {% image loop_cycle.carousel_image original as img %}
+          <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
+            <img src="{{ img.url }}" class="img-fluid d-block w-100" alt="{{ img.alt }}">
+          </div>
+          {% endfor %}
+  
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </div>
   </div>
 </div>
 
