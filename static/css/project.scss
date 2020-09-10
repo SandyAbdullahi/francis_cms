@@ -13,6 +13,9 @@
   flex: 1;
 }
 
+.text-muted {
+  font-weight: 900 !important;
+}
 .navbar {
   background: $body-bg;
 
@@ -65,11 +68,18 @@
 }
 
 .services-container {
+  h1 {
+    font-weight: 600;
+  }
+  .second-line  {
+    color: $accent;
+  }
   .row {
     margin: auto;
 
     h4 {
       color: $accent;
+      font-weight: 900;
     }
 
     .number {
@@ -85,22 +95,27 @@
 
     .row {
       .text {
-        padding: 1rem 1rem 4rem 2rem;
+        padding: 1rem 3rem 2rem 2rem;
 
         h2 {
+          font-weight: 900;
           color: $accent;
         }
 
         p {
-          margin-top: 5rem;
+          margin-top: 1.6rem;
         }
       }
 
       .image-container {
-        background: url('src/assets/images/luke-southern.jpg') no-repeat center;
-        background-size: cover;
-        height: 60vh;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
       }
+      .box{
+        height: 100%;       
+        padding: 0 !important;
+    }  
     }
 
     .row-2 {

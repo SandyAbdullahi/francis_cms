@@ -27,6 +27,10 @@ class HomePage(Page):
     muted_text_bottom = RichTextField(blank=True)
     service_title = RichTextField(blank=True)
     service_content = RichTextField(blank=True)
+    service_image = models.ForeignKey(
+        'wagtailimages.Image', null=True, blank=True,
+        on_delete=models.SET_NULL, related_name='+'
+    )
     point_one_title = RichTextField(blank=True)
     point_one_content = RichTextField(blank=True)
     point_two_title = RichTextField(blank=True)
@@ -57,6 +61,7 @@ class HomePage(Page):
         FieldPanel('muted_text_bottom', classname="full"),
         FieldPanel('service_title', classname="full"),
         FieldPanel('service_content', classname="full"),
+        FieldPanel('service_image', classname="full"),
         FieldPanel('point_one_title', classname="full"),
         FieldPanel('point_one_content', classname="full"),
         FieldPanel('point_two_title', classname="full"),

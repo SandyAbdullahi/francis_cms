@@ -13,7 +13,7 @@
         <div class="headline">{{ page.headline|richtext }}</div>
         <p>{{ page.headline_intro|richtext }}</p>
         <p class="lead">
-          <a class="btn btn-alt btn-lg rounded-pill" [routerLink]="['/services']" role="button">Learn More</a>
+          <a class="btn btn-alt btn-lg rounded-pill" href="services/" role="button">Learn More</a>
         </p>
       </div>
       <div class="col-12 col-md-7 col-lg-5">
@@ -27,9 +27,9 @@
 
 <div class="services-container">
   <div class="container">
-    <p class="text-muted font-weight-bold">{{ page.muted_text_top|richtext }}</p>
+    <p class="text-muted">{{ page.muted_text_top|richtext }}</p>
     <h1>{{ page.top_sentence|richtext }}</h1>
-    <h1>{{ page.top_sentence_second|richtext }}</h1>
+    <h1 class="second-line">{{ page.top_sentence_second|richtext }}</h1>
     <div class="row">
       <div class="col-12 col-md-4 my-2">
         <h1 class="number">{{ page.number_one|richtext }}</h1>
@@ -55,9 +55,11 @@
         <p class="text-muted font-weight-bold">{{ page.muted_text_bottom|richtext }}</p>
         <h2>{{ page.service_title|richtext }}</h2>
         <p>{{ page.service_content|richtext }}</p>
-        <a class="btn btn-dark btn-lg rounded-pill" [routerLink]="['/services']"  role="button">My Services</a>
+        <a class="btn btn-dark btn-lg rounded-pill" href="about/"  role="button">About Me</a>
       </div>
-      <div class="col-12 col-md-6 image-container"></div>
+      <div class="col-12 col-md-6 box">
+        {% image page.service_image original class="img-fluid image-container"%}
+      </div>
     </div>
     <div class="row row-2">
       <div class="offer col-12 col-md-4 text-center">
