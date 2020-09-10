@@ -55,6 +55,7 @@ tablib==2.0.0
 Unidecode==1.1.1
 urllib3==1.25.8
 wagtail==2.10.1
+wagtail-transfer==0.5
 webencodings==0.5.1
 whitenoise==5.2.0
 Willow==1.4
