@@ -126,7 +126,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner p-5">
         {% for loop_cycle in self.carousel_images.all %}
-        {% image loop_cycle.carousel_image fill-400x400-c5 as img %}
+        {% image loop_cycle.carousel_image fill-400x400-c0 as img %}
         <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
           <img src="{{ img.url }}" class="img-fluid d-block w-100" alt="{{ img.alt }}">
         </div>
