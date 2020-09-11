@@ -222,6 +222,7 @@ WAGTAIL_SITE_NAME = 'Francis Interior Design'
 WAGTAILIMAGES_FEATURE_DETECTION_ENABLED = True
 
 
+
 WAGTAILTRANSFER_SOURCES = {
     'staging': {
         'BASE_URL': 'http://localhost:3000/wagtail-transfer/',
