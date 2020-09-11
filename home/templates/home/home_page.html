@@ -10,8 +10,10 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 col-md-7 col-lg-7 text">
-        <div class="headline">{{ page.headline|richtext }}</div>
-        <p>{{ page.headline_intro|richtext }}</p>
+        <div class="headline">
+          {{ page.headline|richtext }}
+          {{ page.headline_intro|richtext }}
+        </div>
         <p class="lead">
           <a class="btn btn-alt btn-lg rounded-pill" href="services/" role="button">Learn More</a>
         </p>
@@ -120,28 +122,26 @@
     </div>
 
   </div>
-  <div class="container">
-    <div class="row mx-auto">
-      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner p-5">
-          {% for loop_cycle in self.carousel_images.all %}
-          {% image loop_cycle.carousel_image original as img %}
-          <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
-            <img src="{{ img.url }}" class="img-fluid d-block w-100" alt="{{ img.alt }}">
-          </div>
-          {% endfor %}
-  
+  <div class="container text-center">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner p-5">
+        {% for loop_cycle in self.carousel_images.all %}
+        {% image loop_cycle.carousel_image original as img %}
+        <div class="carousel-item {% if forloop.counter == 1 %} active {% endif %}">
+          <img src="{{ img.url }}" class="img-fluid d-block w-100" alt="{{ img.alt }}">
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
+        {% endfor %}
+
       </div>
-    </div>
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>    
   </div>
 </div>
 

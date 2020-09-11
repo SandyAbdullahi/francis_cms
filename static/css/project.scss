@@ -52,11 +52,10 @@
   }
 
   .headline {
-    * {
+    :first-child {
       font-weight: 900;
-      font-size: 3rem;
       line-height: 1;
-    }:last-child {
+      font-size: 3rem;
       color: $accent;
     }
   }
@@ -458,11 +457,18 @@ footer {
 
 @media (min-width: 1200px) {
   .jumbotron {
-    margin-bottom: 20rem;
-
+    margin-bottom: 12rem;
     .col-md-7 {
-      padding: 0 3rem 0 10rem;
+      padding: 5rem 3rem 5rem 6rem;
     }
+    .headline {
+      :first-child {
+        font-size: 3.5rem;
+    }
+    }
+    .image-container {
+      max-width: 150%;
+    } 
   }
 
   .projects {
@@ -470,4 +476,31 @@ footer {
       height: 17rem;
     }
   }
+}
+
+
+@media (min-width: 1500px) {
+  .jumbotron {
+    margin-bottom: 20rem;
+    .col-md-7 {
+      padding: 5rem 3rem 5rem 6rem;
+    }
+    .headline {
+      :first-child {
+        font-size: 7rem;
+    }
+      :nth-child(2) {
+        font-size: 1.5rem;
+      }
+      .btn-alt {
+        padding: 1rem;
+        font-size: 2rem;
+      } 
+
+    }
+    .image-container {
+      max-width: 170%;
+    } 
+  }
+
 }
