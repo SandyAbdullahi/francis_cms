@@ -453,6 +453,12 @@ footer {
       margin-bottom: 5rem;
     }
   }
+  .carousel {
+    .carousel-inner {
+      margin: auto;
+      width: 50%;
+    }
+  }
 }
 
 @media (min-width: 1200px) {
