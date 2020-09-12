@@ -150,11 +150,12 @@
   border-top: 0.2px solid rgba($accent, 0.2);
   border-bottom: 0.2px solid rgba($accent, 0.2);
   padding: 5rem 1rem;
-
+  h3 {
+    font-weight: 900;
+  }
 
   .img-thumbnail {
     border: 0px solid rgba($accent, 0);
-    height: 20rem;
     width: 100%;
   }
 
@@ -304,6 +305,17 @@ footer {
 
     }
   }
+  .projects {
+    .text {
+      margin: 2rem auto;
+      :first-child {
+        font-size: 1.6rem;
+        color: $accent;
+        font-weight: 900;
+        margin-bottom: -1rem;
+      }
+    }
+  }
   .services-container {
     .call-to-action {
       .row {
@@ -426,9 +438,7 @@ footer {
     padding: 3rem 5rem;
     margin-bottom: 5rem;
 
-    .img-thumbnail {
-      height: 13rem;
-    }
+
   }
 
   .about {
@@ -476,12 +486,12 @@ footer {
       max-width: 150%;
     } 
   }
-
-  .projects {
-    .img-thumbnail {
-      height: 17rem;
+  .services-container {
+    h1 {
+      font-size: 4rem;
     }
   }
+
 }
 
 
