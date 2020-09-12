@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -8,46 +8,50 @@
 
 <div class="service-page-container">
   <div class="container container-1">
-    <p class="text-muted font-weight-bold">Services</p>
-    <h1 class="display-3">What I can do for <span class="text-accent">You</span> </h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur error aperiam corrupti minus est necessitatibus quae sit amet harum porro?</p>
-    <img src="../../../assets/images/christopher-jolly.jpg" class="img-fluid" alt="christopher-jolly">
+    {{ page.headline_muted_text|richtext }}
+    {% comment %} <p class="text-muted font-weight-bold">Services</p> {% endcomment %}
+    <h1 class="display-2">{{ page.headline_title|richtext }}</h1>
+    <p>{{ page.headline_intro|richtext }}</p>
+    {% image page.headline_image fill-2000x1200-c0 as img %}
+    <img src="{{ img.url }}" class="img-fluid" alt="{{ img.alt }}">
     <div class="text">
-      <h2>Unbelievable styles, colors, and textures</h2>
-      <p class="text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati perspiciatis quis vitae est blanditiis consectetur.</p>
+      <h2>{{ page.banner_text_title|richtext }}</h2>
+      <p class="text-secondary">{{ page.banner_text_content|richtext }}</p>
     </div>
   </div>
   <div class="container container-2">
-    <h1 class="mb-5">My Services</h1>
+    <h1 class="mb-5">{{ page.section_title|richtext }}</h1>
     <div class="row">
       <div class="col-12 col-md-6">
-        <h3>General Interior Design Consultations</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum architecto beatae dicta recusandae, facere deleniti iste pariatur iusto deserunt dolorum praesentium atque eius saepe, quibusdam eos cum quo corrupti aliquam?</p>
+        <h3>{{ page.service_one_title|richtext }}</h3>
+        <p>{{ page.service_one_description|richtext }}</p>
       </div>
       <div class="col-12 col-md-6">
-        <img src="../../../assets/images/services/cowomen.jpg" class="img-thumbnail" alt="">
+      {% image page.service_one_image fill-2000x2000-c0 as img %}
+        <img src="{{ img.url }}" class="img-thumbnail" alt="{{ img.alt }}">
       </div>
     </div>
-    <div class="row">
+        <div class="row">
       <div class="col-12 col-md-6">
-        <h3>Wallpaper/Paint</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum architecto beatae dicta recusandae, facere deleniti iste pariatur iusto deserunt dolorum praesentium atque eius saepe, quibusdam eos cum quo corrupti aliquam?</p>
+        <h3>{{ page.service_two_title|richtext }}</h3>
+        <p>{{ page.service_two_description|richtext }}</p>
       </div>
       <div class="col-12 col-md-6">
-        <img src="../../../assets/images/services/christina-winter.jpg" class="img-thumbnail" alt="">
+      {% image page.service_two_image fill-2000x2000-c0 as img %}
+        <img src="{{ img.url }}" class="img-thumbnail" alt="{{ img.alt }}">
       </div>
+    </div>
+        <div class="row">
+      <div class="col-12 col-md-6">
+        <h3>{{ page.service_three_title|richtext }}</h3>
+        <p>{{ page.service_three_description|richtext }}</p>
+      </div>
+      <div class="col-12 col-md-6">
+      {% image page.service_three_image fill-2000x2000-c0 as img %}
+        <img src="{{ img.url }}" class="img-thumbnail" alt="{{ img.alt }}">
+      </div>
+    </div>
 
-    </div>
-    <div class="row">
-      <div class="col-12 col-md-6">
-        <h3>Room Make-Overs</h3>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum architecto beatae dicta recusandae, facere deleniti iste pariatur iusto deserunt dolorum praesentium atque eius saepe, quibusdam eos cum quo corrupti aliquam?</p>
-      </div>
-      <div class="col-12 col-md-6">
-        <img src="../../../assets/images/services/rune-enstad.jpg" class="img-thumbnail" alt="">
-      </div>
-
-    </div>
   </div>
   <div class="container-fluid container-3">
     <h1 class="display-4">Book a meeting</h1>

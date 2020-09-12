@@ -7,7 +7,7 @@ from wagtail.core.fields import RichTextField, StreamField
 from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
-# from streams import blocks
+
 
 class HomePageCarouselImages(Orderable):
     """
