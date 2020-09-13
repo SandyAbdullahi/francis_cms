@@ -240,6 +240,7 @@
   .name {
     color: $accent;
     text-align: right;
+    font-weight: 900;
   }
 
 
@@ -259,6 +260,10 @@
 
   .skills {
     padding: 2rem;
+    h3 {
+      color: $accent;
+      font-weight: 900;
+    }
   }
 
   .call-to-action {
@@ -275,14 +280,17 @@
 
 .contact {
   margin-top: 5rem;
+
   .row {
     padding: 0rem 2rem;
     justify-content: center;
   }
+
   .jumbotron-fluid {
     background-color: #aaaaaa47;
     margin: -0.8rem;
     padding: 3rem;
+
     .jumbotron-title {
       font-size: 1.875rem;
       line-height: 1;
@@ -290,6 +298,7 @@
       color: $accent;
     }
   }
+
   .choice-1,
   .choice-2,
   .choice-3 {
@@ -305,6 +314,7 @@
       display: -ms-flexbox;
       display: flex;
       font-size: 2rem;
+
       .number {
         background-color: rgba($accent, 0.2);
         -ms-flex-pack: center;
@@ -325,9 +335,11 @@
     align-items: center;
     padding: 1.125rem;
   }
+
   .card {
     margin: 0.4rem 0rem;
     background-color: $alt-bg;
+
     &:hover {
       background-color: $accent;
       color: $body-bg;
@@ -460,12 +472,15 @@ footer {
   }
 
   .about {
+
     .bio {
       margin-bottom: 10rem;
 
       .name {
         padding-top: 0rem;
         color: $accent;
+        font-size: 4rem;
+        margin: 8rem auto;
       }
 
       h1 {
@@ -499,13 +514,16 @@ footer {
     }
 
   }
+
   .contact {
     .row {
       padding: 4rem 0rem;
     }
+
     .card {
       margin: 2rem 3rem;
     }
+
     .contact-form-container {
       padding: inherit;
       width: 95%;
@@ -575,21 +593,22 @@ footer {
       h1 {
         padding-top: 5rem;
       }
+
       img {
         width: 40%;
         padding: 0rem;
         margin: 3rem;
       }
+
+      .name {
+        padding-top: 0rem;
+        margin: 0rem auto;
+      }
     }
 
-    .name {
-      padding-top: 0rem;
 
-    }
 
-   
-   
-    
+
 
     .skills {
       margin-top: 0rem;
@@ -610,10 +629,10 @@ footer {
       .jumbotron-title {
         font-size: 2.5rem;
         line-height: 1;
-    }
+      }
 
     }
-    
+
     .contact-form-container {
       width: 80%;
     }
