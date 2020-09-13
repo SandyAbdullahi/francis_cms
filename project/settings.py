@@ -210,10 +210,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-from willow.registry import registry
-import rustface.willow
 
-registry.register_plugin(rustface.willow)
 
 
 # WAGTAIL SITE NAME

@@ -1,51 +1,39 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
 {% block content %}
    <div class="about">
   <div class="container bio">
-    <h1 class="name">Sam Francis</h1>
-    <img src="../../../assets/images/profile/caleb-george.jpg" alt="caleb-george" class="img-fluid">
-    <h1>About Me:</h1>
-    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Minima suscipit possimus eveniet, rerum necessitatibus quo fuga accusamus quasi. Omnis eaque culpa architecto molestiae facilis nisi voluptate voluptas minima repudiandae neque dolorem doloremque magni aut cupiditate nobis nam voluptatum provident iusto quidem itaque possimus, facere animi!</p>
+    <h1 class="name">{{ page.name|richtext }}</h1>
+    {% image page.my_image fill-2000x3500-c0  as img %}
+    <img src="{{ img.url }}" alt="{{ img.alt }}" class="img-fluid">
+    <h1>{{ page.about_title|richtext }}</h1>
+    <p>{{ page.about_bio|richtext }}</p>
   </div>
 
   <div class="skills">
-    <h3>My Skills</h3>
-    <ul>
-      <li>Space planning and space management</li>
-      <li>Preparation of floor plans</li>
-      <li>Theme creations</li>
-      <li>Different types of ceiling work</li>
-      <li>Products and materials sourcing</li>
-      <li>Painting and polishing</li>
-      <li>Wall cover and wallpaper installation</li>
-      <li>Furnishing work</li>
-      <li>Flooring work</li>
-      <li>Mattresses and Bedding selection assistance</li>
-      <li>Rug and Carpet selection assistance</li>
-      <li>All kinds of fixture works</li>
-      <li>Furniture layout and placement design</li>
-      <li>Window treatments</li>
-      <li>Colour palette selection</li>
-      <li>Room Make-Overs</li>
-      <li>Modular kitchen – Planning, designing, customization, and installation</li>
-      <li>lighting planning</li>
-      <li>Interior decoration</li>
+    <h3>{{ page.skills_title|richtext }}</h3>
+    <ul class="list-group">
+      <p>{{ page.skills_list|richtext }}</p>
     </ul>
   </div>
   <div class="call-to-action container-fluid">
     <div class="row">
-      <div class="col-12 overlay">
-        <div class="my-image"></div>
+      <div class="col-12">
+        <div class="text-center">
+          <div class="overlay">
+            {% image page.call_image fill-5000x5000-c0 as img %}
+            <img src="{{ img.url }}" alt="{{ img.alt }}" class="img-fluid">
+          </div>
+        </div>
       </div>
       <div class="col-12">
         <div class="text-center">
-          <h3>Call Me.</h3>
-          <h2 class="phone-number">+254 712 345 678</h2>
+          <h3>{{ page.call_me_title|richtext }}</h3>
+          <h2 class="phone-number">{{ page.call_me_number|richtext }}</h2>
         </div>
       </div>
     </div>
