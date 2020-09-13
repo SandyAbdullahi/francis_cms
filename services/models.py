@@ -7,6 +7,8 @@ from wagtail.core.fields import RichTextField, StreamField
 from wagtail.admin.edit_handlers import FieldPanel, InlinePanel, MultiFieldPanel
 from wagtail.images.edit_handlers import ImageChooserPanel
 
+from wagtail.images.blocks import ImageChooserBlock
+
 
 
 
@@ -41,6 +43,9 @@ class ServicePage(Page):
         'wagtailimages.Image', null=True, blank=True,
         on_delete=models.SET_NULL, related_name='+'
     )
+    call_to_action_title = RichTextField(blank=True)
+    call_to_action_description = RichTextField(blank=True)
+
     
 
 
@@ -70,5 +75,9 @@ class ServicePage(Page):
             FieldPanel('service_three_title', classname="full"),
             FieldPanel('service_three_description', classname="full"),
             ImageChooserPanel('service_three_image', classname="full"),
-       ], heading="Service Content")
+       ], heading="Service Content"),
+       MultiFieldPanel([
+           FieldPanel('call_to_action_title', classname="full"),
+           FieldPanel('call_to_action_description', classname="full"),
+       ], heading="Call to Action Content")
     ]
