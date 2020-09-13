@@ -2,6 +2,7 @@
 @import './colors';
 
 
+
 .site {
   display: flex;
   flex-direction: column;
@@ -277,18 +278,59 @@
     padding: 0rem 2rem;
     justify-content: center;
   }
-  .bg-accent {
-    background-color: $alt-bg;
-  }
-  h1 {
+  .jumbotron-fluid {
     background-color: #aaaaaa47;
-    margin: 2rem 0;
-    padding: 2rem;
-    color: $accent;
-    font-weight: 900;
+    margin: -0.8rem;
+    padding: 3rem;
+    .jumbotron-title {
+      font-size: 1.875rem;
+      line-height: 1;
+      font-weight: 900;
+      color: $accent;
+    }
+  }
+  .choice-1,
+  .choice-2,
+  .choice-3 {
+    h1 {
+      line-height: 1;
+      background-color: #aaaaaa47;
+      margin: 2rem 0;
+      padding: 2rem;
+      color: $accent;
+      font-weight: 900;
+      font-size: 1.3125rem;
+      cursor: pointer;
+      display: -ms-flexbox;
+      display: flex;
+      font-size: 2rem;
+      .number {
+        background-color: rgba($accent, 0.2);
+        -ms-flex-pack: center;
+        justify-content: center;
+        min-width: 3.75rem;
+        text-align: center;
+        padding: 1rem;
+        margin-right: 2rem;
+      }
+    }
+  }
+
+  .item-name {
+    font-size: 2rem;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 1.125rem;
   }
   .card {
     margin: 0.4rem 0rem;
+    background-color: $alt-bg;
+    &:hover {
+      background-color: $accent;
+      color: $body-bg;
+    }
   }
 }
 
@@ -458,10 +500,15 @@ footer {
   }
   .contact {
     .row {
-      padding: 0 1rem;
+      padding: 4rem 0rem;
     }
     .card {
       margin: 2rem 3rem;
+    }
+    .contact-form-container {
+      padding: inherit;
+      width: 95%;
+      margin: auto;
     }
   }
 
@@ -552,6 +599,21 @@ footer {
     .carousel-inner {
       margin: auto;
       width: 50%;
+    }
+  }
+
+
+  .contact {
+    .jumbotron-fluid {
+      .jumbotron-title {
+        font-size: 2.5rem;
+        line-height: 1;
+    }
+
+    }
+    
+    .contact-form-container {
+      width: 80%;
     }
   }
 }
