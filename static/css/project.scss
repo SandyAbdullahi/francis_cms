@@ -260,6 +260,9 @@
 
   .skills {
     padding: 2rem;
+    .skills-list {
+      line-height: 0.4;
+    }
 
     h3 {
       color: $accent;
