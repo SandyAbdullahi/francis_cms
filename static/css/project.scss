@@ -310,6 +310,24 @@
 
     }
   }
+  .choice-2 {
+    .row {
+      padding: 0;
+    }
+    .bootstrap-datetimepicker-widget table {
+      color:$accent !important;
+      background: $alt-bg !important;
+    }
+    .bootstrap-datetimepicker-widget table th.picker-switch{
+      color:$body-color !important;
+      
+  }
+  
+  .bootstrap-datetimepicker-widget table th{
+    color:$body-color !important;
+  }
+  }
+
   .choice-1,
   .choice-2,
   .choice-3 {

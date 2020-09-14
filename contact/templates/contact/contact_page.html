@@ -11,12 +11,12 @@
             <h1 class="jumbotron-title mb-0">Book A Meeting</h1>
         </div>
         <div class="container text-center my-5">
-            <p>Please fill in your details below as well as the services you would like and I will come pay you a visit
+            <p>Please fill in your details below as well as the services you would like by clicking/tapping the checkbox and I will come pay you a visit
                 based on your desired time and place.</p>
         </div>
         <form action="https://liveformhq.com/form/04a07a3d-0938-42ae-9ee8-7a6d880942e4" method="POST"
             accept-charset="utf-8">
-            <input type="hidden" value="http://localhost:3000/contact/" name="_redirect" />
+            <input type="hidden" value="https://francisinteriordesigns.pythonanywhere.com/" name="_redirect" />
 
             <div class="contact-form-container">
                 <div class="choice-1">
@@ -25,6 +25,7 @@
                     <div class="collapse" id="collapse1">
                         <div class="row">
                             <div class="col-12 col-md-4 col-lg-3 custom-control custom-checkbox custom-control-inline">
+                                <img src="https://via.placeholder.com/150" alt="" class="img-thumbnail my-2">
                                 <h4>Service One</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, repellendus?</p>
                                 <div class="mdc-touch-target-wrapper">
@@ -32,18 +33,22 @@
                                         <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1"
                                             id="serviceOne" value="The user would like service One"
                                             name="Service One" />
+                                            
                                         <div class="mdc-checkbox__background">
                                             <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
                                                 <path class="mdc-checkbox__checkmark-path" fill="none"
                                                     d="M1.73,12.91 8.1,19.28 22.79,4.59" />
                                             </svg>
                                             <div class="mdc-checkbox__mixedmark"></div>
+                                            
                                         </div>
                                         <div class="mdc-checkbox__ripple"></div>
+                                        
                                     </div>
                                 </div>
                             </div>
                             <div class="col-12 col-md-4 col-lg-3 custom-control custom-checkbox custom-control-inline">
+                                <img src="https://via.placeholder.com/150" alt="" class="img-thumbnail my-2">
                                 <h4>Service Two</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, repellendus?</p>
                                 <div class="mdc-touch-target-wrapper">
@@ -63,6 +68,7 @@
                                 </div>
                             </div>
                             <div class="col-12 col-md-4 col-lg-3 custom-control custom-checkbox custom-control-inline">
+                                <img src="https://via.placeholder.com/150" alt="" class="img-thumbnail my-2">
                                 <h4>Service Three</h4>
                                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, repellendus?</p>
                                 <div class="mdc-touch-target-wrapper">
@@ -94,7 +100,13 @@
                     <h1 class="item-name" data-toggle="collapse" data-target="#collapse2"><span class="number">2.</span>
                         Date and time</h1>
                     <div class="collapse" id="collapse2">
-
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <input type="hidden" id="datetimepicker13"  id="dateTime" name="The date and time the client would like to meet" />
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
