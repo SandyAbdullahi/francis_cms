@@ -191,7 +191,14 @@
     }
 
     h1 {
-      font-size: 3rem;
+      font-size: 4rem;
+      font-weight: 900;
+      color: $accent;
+      p {
+        width: 100%;
+      }
+    }
+    h2 {
       font-weight: 900;
     }
 
@@ -207,6 +214,13 @@
 
   .container-2 {
     text-align: center;
+    h1 {
+      font-weight: 900;
+    }
+    h3 {
+      color: $accent;
+      font-weight: 900;
+    }
 
     img {
       width: 70%;
@@ -692,6 +706,13 @@ footer {
   .services-container {
     h1 {
       font-size: 4rem;
+    }
+  }
+  .service-page-container {
+    .container-1 {
+      h1 {
+        font-size: 5rem;
+      }
     }
   }
 

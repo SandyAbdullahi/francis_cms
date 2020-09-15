@@ -8,9 +8,9 @@
 
 <div class="service-page-container">
   <div class="container container-1">
-    {{ page.headline_muted_text|richtext }}
+    <div class="text-muted font-weight-bold">{{ page.headline_muted_text|richtext }}</div>
     {% comment %} <p class="text-muted font-weight-bold">Services</p> {% endcomment %}
-    <h1 class="display-2">{{ page.headline_title|richtext }}</h1>
+    <h1>{{ page.headline_title|richtext }}</h1>
     <p>{{ page.headline_intro|richtext }}</p>
     {% image page.headline_image fill-2000x1200-c0 as img %}
     <img src="{{ img.url }}" class="img-fluid" alt="{{ img.alt }}">
@@ -56,7 +56,7 @@
   <div class="container-fluid container-3">
     <h1 class="display-4">Book a meeting</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos quos suscipit iusto esse est voluptatum laboriosam unde! Voluptates temporibus ex cumque esse labore libero nemo.</p>
-      <a class="btn btn-alt btn-lg rounded-pill" [routerLink]="['/contact']"  role="button">Click Here</a>
+      <a class="btn btn-alt btn-lg rounded-pill" href="/contact/" role="button">Click Here</a>
   </div>
 </div>
 

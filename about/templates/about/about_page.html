@@ -14,26 +14,28 @@
     <p>{{ page.about_bio|richtext }}</p>
   </div>
 
-  <div class="skills">
+  <div class="skills text-center">
     <h3>{{ page.skills_title|richtext }}</h3>
     <div class="skills-list">
+    <hr class="m-3">
       <p>{{ page.skills_list|richtext }}</p>
+    <hr>
     </div>
   </div>
   <div class="call-to-action container-fluid">
     <div class="row">
       <div class="col-12">
         <div class="text-center">
+          <h3>{{ page.call_me_title|richtext }}</h3>
+          <h2 class="phone-number">{{ page.call_me_number|richtext }}</h2>
+        </div>
+      </div>
+        <div class="col-12">
+        <div class="text-center">
           <div class="overlay">
             {% image page.call_image fill-5000x5000-c0 as img %}
             <img src="{{ img.url }}" alt="{{ img.alt }}" class="img-fluid">
           </div>
-        </div>
-      </div>
-      <div class="col-12">
-        <div class="text-center">
-          <h3>{{ page.call_me_title|richtext }}</h3>
-          <h2 class="phone-number">{{ page.call_me_number|richtext }}</h2>
         </div>
       </div>
     </div>
