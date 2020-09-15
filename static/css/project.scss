@@ -20,8 +20,10 @@
 
   .navbar-brand {
     // font-family: 'Dancing Script', cursive;
-    // font-style: italic;
-    color: $alt-color;
+    font-style: italic;
+    color: $accent;
+    font-weight: 900;
+    transition: 5s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   &:hover {
