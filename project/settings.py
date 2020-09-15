@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-redirect http to https 
+# redirect http to https 
 SECURE_HSTS_SECONDS = os.environ.get('DJANGO_DEBUG', '') != 'False'
 SECURE_SSL_REDIRECT = os.environ.get('DJANGO_DEBUG', '') != 'False'
 SECURE_HSTS_PRELOAD = os.environ.get('DJANGO_DEBUG', '') != 'False'
