@@ -9,26 +9,18 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 text-center">
 
-                    <ul class="list-unstyled quick-links">
-                        {% if page.title == 'Home' %}
-
-                        {% else %}
-                        <li><a href="{% pageurl page.get_parent %}"><i
-                                    class="fas fa-angle-right"></i>{{ page.get_parent.title }}</a></li>
-                        {% endif %}
-
-
-                        {% for page in page.get_siblings %}
-
-                        <li><a href="{% pageurl page %}"><i class="fas fa-angle-right"></i>{{ page.title }}</a></li>
-        
-        {% endfor %}   
-
-        {% for page in page.get_children %}
-                 <li><a href="{% pageurl page %}"><i class="fas fa-angle-right"></i>{{ page.title }}</a></li>
-        
-        {% endfor %}  
-        </ul>
+                  <ul class="list-unstyled quick-links">
+                    {% if page.title == 'Home' %}
+                        {% for page in page.get_children %}
+                          <li><a href="{% pageurl page %}"><i class="fas fa-angle-right"></i>{{ page.title }}</a></li>
+                      {% endfor %}  
+                      {% else %}
+                        <li><a href="{% pageurl page.get_parent %}"><i class="fas fa-angle-right"></i>{{ page.get_parent.title }}</a></li>
+                      {% for page in page.get_siblings %}
+                          <li><a href="{% pageurl page %}"><i class="fas fa-angle-right"></i>{{ page.title }}</a></li>
+                      {% endfor %}
+                    {% endif %}
+                  </ul>
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
         <ul class="list-unstyled list-inline social text-center">
