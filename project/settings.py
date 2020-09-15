@@ -27,18 +27,18 @@ import os
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&k3q+pmu)5%asj6yjpkag')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-# DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+# DEBUG = True
+DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-# redirect http to https 
-# SECURE_HSTS_SECONDS = os.environ.get('DJANGO_DEBUG', '') != 'False'
-# SECURE_SSL_REDIRECT = os.environ.get('DJANGO_DEBUG', '') != 'False'
-# SECURE_HSTS_PRELOAD = os.environ.get('DJANGO_DEBUG', '') != 'False'
+redirect http to https 
+SECURE_HSTS_SECONDS = os.environ.get('DJANGO_DEBUG', '') != 'False'
+SECURE_SSL_REDIRECT = os.environ.get('DJANGO_DEBUG', '') != 'False'
+SECURE_HSTS_PRELOAD = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-# SECURE_HSTS_INCLUDE_SUBDOMAINS = os.environ.get('DJANGO_DEBUG', '') != 'False'
-# SESSION_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
-# CSRF_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
+SECURE_HSTS_INCLUDE_SUBDOMAINS = os.environ.get('DJANGO_DEBUG', '') != 'False'
+SESSION_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
+CSRF_COOKIE_SECURE = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
 

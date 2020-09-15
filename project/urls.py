@@ -22,9 +22,11 @@ from wagtail.documents import urls as wagtaildocs_urls
 from wagtail_transfer import urls as wagtailtransfer_urls
 from django.conf import settings
 from django.conf.urls.static import static
+from home.views import success
 
 
 urlpatterns = [
+    path('success/', success, name='success'),
     path('admin/', include(wagtailadmin_urls)),
     path('documents/', include(wagtaildocs_urls)),
     re_path(r'', include(wagtail_urls)),
