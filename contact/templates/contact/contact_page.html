@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% load wagtailcore_tags %}
+{% load wagtailcore_tags wagtailimages_tags %}
 
 {% block body_class %}template-homepage{% endblock %}
 
@@ -23,71 +23,37 @@
                         Choose a service</h1>
                     <div class="collapse" id="collapse1">
                         <div class="row">
-                            <div class="col-12 col-md-6 col-lg-4 col-xl-3 custom-control custom-checkbox custom-control-inline">
-                                <img src="https://via.placeholder.com/150" alt="" class="img-thumbnail my-2">
-                                <h4>Service One</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, repellendus?</p>
-                                <div class="mdc-touch-target-wrapper">
-                                    <div class="mdc-checkbox mdc-checkbox--touch">
-                                        <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-1"
-                                            id="serviceOne" value="The user would like service One"
-                                            name="Service One" />
-                                            
-                                        <div class="mdc-checkbox__background">
-                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                    d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                            </svg>
-                                            <div class="mdc-checkbox__mixedmark"></div>
-                                            
+
+
+                            {% for service in page.get_children %}
+                                {% with service=service.specific  %}
+
+                                    <div
+                                        class="col-12 col-md-6 col-lg-4 col-xl-3 custom-control custom-checkbox custom-control-inline">
+                                        {% image service.service_image fill-200x200-c0 as img %}
+                                        <img src="{{ img.url }}" alt="{{ img.alt }}" class="img-thumbnail my-2">
+                                        <h4>{{ service.service_title|richtext }}</h4>
+                                        <p>{{ service.service_description|richtext }}</p>
+                                        <div class="mdc-touch-target-wrapper">
+                                            <div class="mdc-checkbox mdc-checkbox--touch">
+                                                <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox"
+                                                    id="service" value="The user would like service three"
+                                                    name="{{ service.service_email_name|richtext }}" />
+                                                <div class="mdc-checkbox__background">
+                                                    <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                                                        <path class="mdc-checkbox__checkmark-path" fill="none"
+                                                            d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                                                    </svg>
+                                                    <div class="mdc-checkbox__mixedmark"></div>
+                                                </div>
+                                                <div class="mdc-checkbox__ripple"></div>
+                                            </div>
                                         </div>
-                                        <div class="mdc-checkbox__ripple"></div>
-                                        
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 col-xl-3 custom-control custom-checkbox custom-control-inline">
-                                <img src="https://via.placeholder.com/150" alt="" class="img-thumbnail my-2">
-                                <h4>Service Two</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, repellendus?</p>
-                                <div class="mdc-touch-target-wrapper">
-                                    <div class="mdc-checkbox mdc-checkbox--touch hover-indeterminate">
-                                        <input type="checkbox" class="mdc-checkbox__native-control" id="checkbox-2"
-                                            id="serviceTwo" value="The user would like service Two"
-                                            name="Service Two" />
-                                        <div class="mdc-checkbox__background">
-                                            <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
-                                                <path class="mdc-checkbox__checkmark-path" fill="none"
-                                                    d="M1.73,12.91 8.1,19.28 22.79,4.59" />
-                                            </svg>
-                                            <div class="mdc-checkbox__mixedmark"></div>
-                                        </div>
-                                        <div class="mdc-checkbox__ripple"></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-md-6 col-lg-4 col-xl-3 custom-control custom-checkbox custom-control-inline">
-                                <img src="https://via.placeholder.com/150" alt="" class="img-thumbnail my-2">
-                                <h4>Service Three</h4>
-                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius, repellendus?</p>
-                                <div class="mdc-touch-target-wrapper">
-                                    <div class="mdc-checkbox mdc-checkbox--touch">
-                                      <input type="checkbox"
-                                             class="mdc-checkbox__native-control"
-                                             id="checkbox-3" id="serviceThree" value="The user would like service three" name="Service Three"/>
-                                      <div class="mdc-checkbox__background">
-                                        <svg class="mdc-checkbox__checkmark"
-                                             viewBox="0 0 24 24">
-                                          <path class="mdc-checkbox__checkmark-path"
-                                                fill="none"
-                                                d="M1.73,12.91 8.1,19.28 22.79,4.59"/>
-                                        </svg>
-                                        <div class="mdc-checkbox__mixedmark"></div>
-                                      </div>
-                                      <div class="mdc-checkbox__ripple"></div>
-                                    </div>
-                                  </div>
-                                  </div>
+
+                                {% endwith %}
+                            {% endfor %}
+
 
 
                         </div>
@@ -102,7 +68,8 @@
                         <div class="form-group">
                             <div class="row">
                                 <div class="col-md-8">
-                                    <input type="hidden" id="datetimepicker13"  id="dateTime" name="The date and time the client would like to meet" />
+                                    <input type="hidden" id="datetimepicker13" id="dateTime"
+                                        name="The date and time the client would like to meet" />
                                 </div>
                             </div>
                         </div>
@@ -117,25 +84,31 @@
                         <div class="row text-center">
                             <div class="col-12 col-md form-group">
                                 <label for="firstName">First Name</label>
-                                <input type="text" class="form-control mb-2 w-75 mx-auto" id="firstName" name="First Name" placeholder="John">
+                                <input type="text" class="form-control mb-2 w-75 mx-auto" id="firstName"
+                                    name="First Name" placeholder="John">
                             </div>
                             <div class="col-12 col-md form-group">
                                 <label for="lastName">Last Name</label>
-                                <input type="text" class="form-control w-75 mx-auto" id="lastName" name="Last Name" placeholder="Doe">
-                              </div>
+                                <input type="text" class="form-control w-75 mx-auto" id="lastName" name="Last Name"
+                                    placeholder="Doe">
+                            </div>
                             <div class="col-12 col-md form-group">
                                 <label for="email">Email address</label>
-                                <input type="email" class="form-control w-75 mx-auto" id="email" name="Email" placeholder="name@example.com">
-            
-                              </div>
-                              <div class="col-12 col-md form-group">
+                                <input type="email" class="form-control w-75 mx-auto" id="email" name="Email"
+                                    placeholder="name@example.com">
+
+                            </div>
+                            <div class="col-12 col-md form-group">
                                 <label for="phoneNumber">Phone Number</label>
-                                <input type="text" class="form-control w-75 mx-auto" id="phoneNumber" name="Phone Number" placeholder="+254721234567">
-                              </div>
-                              <div class="col-12 form-group">
-                                  <textarea id="details" name="details" id="details" cols="30" rows="10" placeholder="You can use this form to add more details about your request" class="form-control w-75 mx-auto"></textarea>
-              
-                              </div>
+                                <input type="text" class="form-control w-75 mx-auto" id="phoneNumber"
+                                    name="Phone Number" placeholder="+254721234567">
+                            </div>
+                            <div class="col-12 form-group">
+                                <textarea id="details" name="details" id="details" cols="30" rows="10"
+                                    placeholder="You can use this form to add more details about your request"
+                                    class="form-control w-75 mx-auto"></textarea>
+
+                            </div>
 
                         </div>
                     </div>
@@ -145,8 +118,9 @@
             </div>
 
 
+
     </div>
-    <div class="jumbotron pt-1 text-center mb-5">
+    <div class="jumbotron pt-1 text-center mb-">
         <p>Click here to submit your request.</p>
         <button type="submit" class="mdc-button foo-button">
             <div class="mdc-button__ripple"></div>
