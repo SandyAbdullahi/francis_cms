@@ -9,21 +9,22 @@
   <div class="collapse navbar-collapse" id="collapsibleNavId">
     <div class="nav navbar-nav ml-auto">
         {% if page.title == 'Home' %}
-        
-        {% else %}
-        <a class="nav-item nav-link" href="{% pageurl page.get_parent %}">{{ page.get_parent.title }}</a>
-        {% endif %}
-
-
-        {% for page in page.get_siblings %}
-        <a class="nav-item nav-link" href="{% pageurl page %}">{{ page.title }}</a>
-        
-        {% endfor %}   
-
-        {% for page in page.get_children %}
+          {% for page in page.get_children %}
         <a class="nav-item nav-link" href="{% pageurl page %}">{{ page.title }}</a>
         
         {% endfor %}  
+        {% else %}
+        <a class="nav-item nav-link" href="{% pageurl page.get_parent %}">{{ page.get_parent.title }}</a>
+        {% for page in page.get_siblings %}
+        <a class="nav-item nav-link" href="{% pageurl page %}">{{ page.title }}</a>
+        
+        {% endfor %}
+        {% endif %}
+
+
+    
+
+
   </div>
   </div>
 </nav>

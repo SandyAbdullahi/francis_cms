@@ -10,6 +10,7 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 
 
 class AboutPage(Page):
+    nav_link = RichTextField(blank=True)
     name = RichTextField(blank=True)
     my_image = models.ForeignKey(
         'wagtailimages.Image', null=True, blank=True,
@@ -37,6 +38,7 @@ class AboutPage(Page):
 
     content_panels = Page.content_panels + [
         MultiFieldPanel([
+        FieldPanel('nav_link', classname="full"),
         FieldPanel('name', classname="full"),
         ImageChooserPanel('my_image', classname="full"),
         FieldPanel('about_title', classname="full"),

@@ -14,6 +14,7 @@ from wagtail.images.blocks import ImageChooserBlock
 
 class ServicePage(Page):
     #headline content
+    nav_link = RichTextField(blank=True)
     headline_muted_text = RichTextField(blank=True)
     headline_title = RichTextField(blank=True)
     headline_intro = RichTextField(blank=True)
@@ -57,6 +58,7 @@ class ServicePage(Page):
 
     content_panels = Page.content_panels + [
         MultiFieldPanel([
+            FieldPanel('nav_link', classname="full"),
             FieldPanel('headline_muted_text', classname="full"),
             FieldPanel('headline_title', classname="full"),
             FieldPanel('headline_intro', classname="full"),

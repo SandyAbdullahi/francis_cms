@@ -9,7 +9,7 @@ from wagtail.images.edit_handlers import ImageChooserPanel
 
 
 class ContactPage(Page):
-   
+    nav_link = RichTextField(blank=True)
     headline_title = RichTextField(blank=True)
     headline_message = RichTextField(blank=True)
 
@@ -19,6 +19,7 @@ class ContactPage(Page):
 
     content_panels = Page.content_panels + [
         MultiFieldPanel([
+            FieldPanel('nav_link', classname="full"),
             FieldPanel('headline_title', classname="full"),
             FieldPanel('headline_message', classname="full"),
         ], heading="Headline Content")
@@ -42,3 +43,5 @@ class ServiceItem(Page):
        ], heading="Service choices")
 
     ]
+    parent_page_types = ['ContactPage']
+

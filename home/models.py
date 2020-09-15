@@ -25,6 +25,7 @@ class HomePageCarouselImages(Orderable):
 
 
 class HomePage(Page):
+    nav_link= RichTextField(blank=True)
     headline = RichTextField(blank=True)
     headline_intro = RichTextField(blank=True)
     headline_image = models.ForeignKey(
@@ -87,6 +88,7 @@ class HomePage(Page):
 
     content_panels = Page.content_panels + [
         MultiFieldPanel([
+            FieldPanel('nav_link', classname="full"),
             FieldPanel('headline', classname="full"),
             FieldPanel('headline_intro', classname="full"),
             ImageChooserPanel('headline_image', classname="full"),
