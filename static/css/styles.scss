@@ -12,3 +12,14 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+// viewport helpers
+@viewport{
+    zoom: 1.0;
+    width: device-width;
+}
+
+@-ms-viewport{
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
