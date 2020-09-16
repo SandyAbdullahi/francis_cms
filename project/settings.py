@@ -51,6 +51,7 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     # Apps
+    'overextends',
     'home',
     'about',
     'services',

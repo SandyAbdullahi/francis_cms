@@ -47,6 +47,9 @@ header {
 .breadcrumb {
     background: #564787;
 }
+.breadcrumb li:hover {
+    background: #9AD4D6;
+}
 
 .page-explorer .listing .index {
     background: #101935; 
