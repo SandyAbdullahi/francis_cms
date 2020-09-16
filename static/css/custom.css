@@ -133,3 +133,7 @@ header {
     background-color: #9AD4D66a;
 }
 
+h2.title-wrapper {
+    position: relative !important;
+  
+}
