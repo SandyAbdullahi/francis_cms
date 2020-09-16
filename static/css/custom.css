@@ -108,7 +108,9 @@ header {
  background: #F2FDFF !important;
 
 }
-
+.object>.title-wrapper {
+    padding: 1.9em 0 .9em 5em !important;
+}
 .objects .title-wrapper:before {
     background-color: #564787 !important;
 }
