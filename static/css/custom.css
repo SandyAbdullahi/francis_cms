@@ -137,3 +137,13 @@ h2.title-wrapper {
     position: relative !important;
   
 }
+
+.my-wrapper {
+    margin-top: 14rem;
+}
+.my-wrapper h1 {
+    color: #9AD4D6;
+    font-weight: 900;
+    /* margin: auto;
+    width: 50%; */
+}
