@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'about',
     'services',
     'contact',
+    'wagtail_hooks',
 
 
     #sass compressor

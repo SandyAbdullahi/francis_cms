@@ -1,0 +1,127 @@
+/* 
+BRAND COLORS
+$accent: #9AD4D6;
+$alt-color: #DBCBD8;
+$alt-bg: #564787;
+$body-color: #F2FDFF;
+$body-bg: #101935; 
+*/
+
+body,html {
+    background-color: #101935 !important;
+    color: #F2FDFF !important;
+}
+
+header {
+    background-color: #101935;
+}
+
+.content {
+    background-color: #F2FDFF;
+    color: #101935;
+}
+
+.messages {
+    background-color: #101935
+    
+}
+.content-wrapper {
+    background-color: #101935 !important;    
+}
+
+.button {
+    background: #564787 !important;
+    border: 1px solid #564787;
+}
+
+.nav-wrapper, .nav-wrapper .inner {
+    background: #101935; 
+}
+
+.nav-main .account {
+    background: #564787;
+}
+
+
+
+.breadcrumb {
+    background: #564787;
+}
+
+.page-explorer .listing .index {
+    background: #101935; 
+}
+
+
+
+.page-explorer .listing .index .button.bicolor {
+    background:  #9AD4D6;
+}
+
+.page-explorer .listing .index .button:hover {
+    background: #F2FDFF;
+    color: #101935;
+}
+
+
+.listing .actions a:hover {
+    background: #F2FDFF;
+    color: #101935;
+}
+
+.listing .children a {
+    color: #9AD4D6;;
+}
+
+.listing .children a:hover {
+    color: #101935;
+}
+.listing .children:hover {
+    background-color: #9AD4D6 !important;
+}
+
+.listing tbody tr .children:hover {
+    background-color: #9AD4D6 !important;
+}
+
+.nav-main .menu-active>a {
+    border-left-color: #9AD4D6;
+}
+
+
+.tab-nav a{
+    background: #564787;
+    border-top: .3em solid #101935;
+
+}
+.tab-nav a:hover {
+    border-top: .3em solid #101935a3;
+}
+.tab-nav.merged {
+    background: #564787a3;
+    
+}
+.title-wrapper {
+    background: #5647872b !important;
+}
+.title .title-wrapper {
+ background: #F2FDFF !important;
+
+}
+
+.objects .title-wrapper:before {
+    background-color: #564787 !important;
+}
+
+.workflow-tasks__task {
+    border: 2px solid #9AD4D6;
+    color: #9AD4D6;
+}
+
+.dropdown .dropdown-toggle {
+    background-color: #9AD4D6;
+}
+.dropdown .dropdown-toggle:hover {
+    background-color: #9AD4D66a;
+}
+
