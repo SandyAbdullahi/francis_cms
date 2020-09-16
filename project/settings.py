@@ -51,12 +51,12 @@ ALLOWED_HOSTS = ['*']
 
 INSTALLED_APPS = [
     # Apps
-    # 'overextends',
+    'overextends',
     'home',
     'about',
     'services',
     'contact',
-    'wagtail_hooks',
+    'waghooks',
 
 
     #sass compressor
@@ -192,7 +192,7 @@ DATABASES['default'].update(db_from_env)
 STATIC_ROOT = os.path.join(BASE_DIR, '/static/')
 
 # The URL to use when referring to static files (where they will be served from)
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_FINDERS = [
     'compressor.finders.CompressorFinder'
